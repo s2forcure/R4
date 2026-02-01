@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>R4</title>
+
+  <link rel="icon" href="./favicon.ico?v=12" sizes="any">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brandMark">R4</div>
+    <div class="brandSub">S2 1st EP · interactive archive</div>
+  </div>
+  <button id="resetBtn" class="resetBtn" type="button">RESET</button>
+</header>
+
+<div class="bg" aria-hidden="true">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+  <div class="grain"></div>
+</div>
+
+<main class="wrap">
+  <section class="hero">
+    <h1 class="heroTitle">S2</h1>
+    <p class="heroLine">tap icons · gallery bursts · delete like photobooth</p>
+  </section>
+
+  <!-- kiiikiii 느낌: 작은 아이콘 스트립 -->
+  <section class="dock" aria-label="menu">
+    <button class="dockItem" data-key="wand" type="button">
+      <img class="dockIcon" src="assets/wand.png" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-wand')">
+      <div class="dockLabel">WAND</div>
+    </button>
+
+    <button class="dockItem" data-key="dia" type="button">
+      <img class="dockIcon" src="assets/dia.png" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-dia')">
+      <div class="dockLabel">DIA</div>
+    </button>
+
+    <button class="dockItem" data-key="spade" type="button">
+      <img class="dockIcon" src="assets/spade.png" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-spade')">
+      <div class="dockLabel">SPADE</div>
+    </button>
+
+    <button class="dockItem" data-key="clover" type="button">
+      <img class="dockIcon" src="assets/clover.png" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-clover')">
+      <div class="dockLabel">CLOVER</div>
+    </button>
+
+    <button class="dockItem" data-key="heart" type="button">
+      <img class="dockIcon" src="assets/heart.png" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('fallback-heart')">
+      <div class="dockLabel">HEART</div>
+    </button>
+  </section>
+
+  <!-- 컨텐츠가 여기에서 “와다다” -->
+  <section class="stage" id="stage">
+    <div class="stageTop">
+      <div class="stageTitle" id="stageTitle">R4</div>
+      <div class="stageDesc" id="stageDesc">아이콘을 눌러 컨텐츠를 열어줘.</div>
+    </div>
+
+    <div class="stageBody" id="stageBody">
+      <div class="empty">
+        <div class="emptyBig">R4</div>
+        <div class="emptySmall">작은 아이콘을 눌러 시작.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- spoiler 음악 -->
+<audio id="spoilerAudio" src="assets/spoiler.mp3" preload="auto"></audio>
+
+<!-- 라이트박스 -->
+<div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true">
+  <button id="lbClose" class="lbClose" type="button" aria-label="close">×</button>
+  <img id="lbImg" class="lbImg" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
